@@ -1,11 +1,17 @@
 from src.combine import Combine
 import pandas as pd
+import os
 
 def test_add():
-    files = ['./fixtures/accessories.csv', './fixtures/clothing.csv', './fixtures/household_cleaners.csv', './fixtures/color.csv']
+    current_path = os.path.abspath(__file__)
+    father_path = os.path.abspath(os.path.dirname(current_path) + os.path.sep + ".")
+    files = ['/fixtures/accessories.csv', '/fixtures/clothing.csv', '/fixtures/household_cleaners.csv', '/fixtures/color.csv']
+    for i in range(len(files)):
+        files[i] = father_path + files[i]
+    
     combine = Combine()
     test_pd = combine.combine_cvs(files)
-    expected_pd = pd.read_csv('./output.csv')
+    expected_pd = pd.read_csv(father_path+'/output.csv')
     # check their shape are the same
     assert(test_pd.shape) == (expected_pd.shape)
     col = test_pd.shape[1]
