@@ -4,6 +4,9 @@ import pandas as pd
 
 class Combine:
 
+    """
+    combine csv files given their file path
+    """
     def combine_cvs(self,files):
         df_list = []
         try:
@@ -27,6 +30,9 @@ class Combine:
         except OSError:
             print('Please enter valid csv file path.')
 
+    """
+    output the script into a new csv file
+    """
     def output_csv(self,pd):
         try:
             pd.to_csv('./combine.csv', index=None)  

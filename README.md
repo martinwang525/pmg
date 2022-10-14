@@ -14,13 +14,13 @@ $ pip install -U pytest
 
 
 ## Main function
-Please make sure that you open the terminal in the `/src` file, then you can execute the following command:
+Please make sure that you open the terminal in the `/src` folder, then you can execute the following command:
 
 ```
 $ python main.py ./fixtures/accessories.csv ./fixtures/clothing.csv ./fixtures/household_cleaners.csv
 ```
 
-The output script will be stored in the file `combined.csv`.
+The output script will be stored in the file `combined.csv` in the `/src` folder.
 
 You can change csv files in the `/src/fixtures` folder to test different inputs.
 
