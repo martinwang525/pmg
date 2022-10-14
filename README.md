@@ -14,7 +14,7 @@ $ pip install -U pytest
 
 
 ## Main function
-Please make sure that you open the terminal in the /src file, then you can execute the following command:
+Please make sure that you open the terminal in the `/src` file, then you can execute the following command:
 
 ```
 $ python main.py ./fixtures/accessories.csv ./fixtures/clothing.csv ./fixtures/household_cleaners.csv
@@ -22,13 +22,13 @@ $ python main.py ./fixtures/accessories.csv ./fixtures/clothing.csv ./fixtures/h
 
 The output script will be stored in the file `combined.csv`.
 
-You can change csv files in the /src/fixtures folder to test different inputs.
+You can change csv files in the `/src/fixtures` folder to test different inputs.
 
 
 ## Unit test
 The unit tests are developed using the pytest framework. Please make sure that you run the unit test starting with the keyword "pytest".
 
-For example, if you're in the root(/pmg foler), you can execute the following command:
+For example, if you're in the root(`/pmg` foler), you can execute the following command:
 
 ```
 $ pytest tests/testcase_multiple_columns/test_combine_multiple_columns.py
